@@ -1,0 +1,190 @@
+Sección 1: Introducción
+
+1. Introduccion
+2. ¿Como funciona el curso?
+3. Instalaciones necesarias
+	https://gist.github.com/Klerith/177c153db77e566cb763f79e65d248bf
+
+4. ¿Cómo hacer preguntas?
+
+Sección 2: Fundamentos de Node
+5. Introducción a la sección
+	Temas de la sección:
+
+	La sección se enfoca en los siguientes temas:
+
+		¿Por qué es tan popular Node?
+		¿Qué es blocking y non-blocking I/O?
+		Realizar nuestro primer programa de Node
+		Comprender como es que Node resuelve los procesos síncronos y asíncronos
+		Comprender el ciclo de vida de un proceso en Node
+
+7. Preguntas comunes sobre Node
+	* Node corre sobre el motor V8 de google
+	
+8. Blocking vs Non Blocking I/O
+	https://github.com/Klerith/node-blocking-vs-non-blocking/
+	Es ejecutar funciones de forma asincrona para no bloquear el hilo de ejecucion
+	
+9. Hola Mundo en Node
+10. Ciclo de eventos de Node - Ejemplos
+11. Ciclo de vida de un proceso en Node
+12. Nodemon
+	* https://www.npmjs.com/package/nodemon
+	* Instalar de forma global --> npm install -g nodemon
+	* Extension para ejecutar archivos js en consola. Ejecuta el archivo en la consola cada que se modifica.
+		nodemon app.js
+
+13. Código fuente de la sección
+
+Sección 3: Reforzamiento de los temas necesarios para seguir el curso
+
+14. Introducción a la sección
+15. Temas puntuales de la sección
+	La sección se enfoca en los siguientes temas:
+
+		Instalación de paquetes mediante npm
+		Reforzamiento de ES6 y ES7
+			Let vs Var
+			Template literales
+			Destructuración
+			Funciones de flecha
+			Callbacks y callbacks en cadena
+			Promesas y promesas en cadena
+			Async y Await
+
+16. Const vs Let vs Var
+	* Las vlbes creadas con const son mas livianas que las let.
+
+17. Templates literales
+	* Con los `` los saltos de linea se ven reflejados
+
+18. Destructuración de objetos
+	* Arrays y objetos literales
+
+19. Funciones de Flecha
+20. Callbacks
+	* Callback: Una funcion que se va a ejecutar despues en cierto punto del tiempo.
+	* Callback: una funcion que se envia a otra como argumento.
+
+	* Esto es redundante
+		const getUsuarioById = (id) => {
+			const usuario = {
+				id: id
+			}
+		}
+
+		Se puede hacer asi, dandole el valor del argumento (id) a la propiedad (id) del objeto:
+		const getUsuarioById = (id) => {
+			const usuario = {
+				id
+			}
+		}
+
+21. Problemas comunes con los callbacks
+22. Callback Hell
+23. Promesas
+24. Promesas en cadena
+25. Async - Await
+	* async: transforma la funcion en una asincrona que retorna una promesa.
+	* El await solo puede estar dentro de una funcion asincrona.
+26. Código fuente de la sección
+
+Sección 4: Bases de node
+
+27. Introducción a la sección
+28. Temas puntuales de la sección
+
+	La sección se enfoca en los siguientes temas:
+
+		* Requerir información de otros archivos
+		* Requerir paquetes
+		* Importar archivos personalizados
+		* NPM
+			Install
+			Uninstall
+		* Package.json
+		* Yargs
+		* Recibir parámetros por línea de comando
+		* Colores para la consola
+
+29. Inicio del proyecto - Sección 4
+30. Requerir paquetes - require
+	* Utilizar filesistem para crear archivos.
+	* https://nodejs.org/dist/latest-v14.x/docs/api/fs.html
+
+31. Importar archivos de nuestro proyecto
+32. Recibir información desde línea de comando
+33. package.json - init - install - uninstall
+	* https://www.npmjs.com/package/colors
+	* npm init -Y --> Crea el package.json con valores predeterminados.
+	* npm init --> Crea el package.json que sirve como punto de partida para cualquier proyecto de Node, ayuda a node para saber que comandos ejecutar para poder ejecutar mi aplicacion.
+	* npm install colors --> Instalar paquete colors que sirve para dar color a la salida de la consola. Esto crea la siguinte seccion en el archivo package.json
+		"dependencies": {
+			"colors": "^1.4.0"
+		}
+
+		* Las dependencias son paquetes necesarios para ejecutar la aplicacion.
+		* Tambien se crea el archivo package-lock.json, este archivo dice como se deben construir las dependencias del package.json, y este archivo no se debe modificar manualmente.
+
+	* npm install nodemon --save-dev --> instala el paquete nodemon pero solo para desarrollo, crea en el package.json esto
+		"devDependencies": {
+			"nodemon": "^2.0.12"
+		}
+
+		* Solo son necesarias cuando se edite la aplicacion.
+
+	* npm uninstall nodemon --> Para desinstalar nodemon, esto borra del package.json la dependencia.
+	* npm i colors@1.0.0 --> Para instalar una version especifica del paquete, en este caso la 1.0.0.
+	* npm update --> Actualiza las dependencias a las versiones mas recientes.
+
+34. Yargs
+	* https://www.npmjs.com/package/yargs
+	* Yargs helps you build interactive command line tools, by parsing arguments and generating an elegant user interface.
+	* Yargs se utiliza para trabajar los argumentos que se envian a la aplicacion por medio de la consola.
+
+35. Configuraciones de Yargs
+36. Configuración de Yargs independiente
+37. Colores de la consola
+38. Tarea - Tabla hasta X
+39. Git - Preparar repositorio
+	* git checkout -- . --> Recuperar todos los archivos de la rama actual, esto en local.
+
+40. Respaldo del proyecto con en GitHub
+41. Código fuente de la sección
+
+Sección 5: Aplicación de consola interactiva - Tareas por hacer
+42. Introducción a la sección
+43. Temas puntuales de la sección
+
+	Temas de esta sección
+
+	El objetivo es que creemos una aplicación de consola interactiva, con opciones que se puedan seleccionar con las teclas direccionales, números y con la tecla espaciadora cuando hay multiples opciones.
+		* stdin
+		* stdout
+		* Ciclos
+		* Inquirer
+		* Clases en JavaScript
+		* Archivos JSON
+		* Fuertemente async y await
+		* Transformaciones
+
+Esta es una aplicación real que les puede servir mucho cuando tengan que crear alguna aplicación de consola.
+
+44. Demostración del objetivo final de la sección
+45. Inicio de proyecto - Tareas por hacer
+46. stdin - stdout - Readline
+	* Se crea ojeto para leer informacion de la consola.
+
+	const readLine = require('readline').createInterface({
+		input: process.stdin,
+		output: process.stdout
+	});
+	
+	readLine.question('Seleccioner una opción: ', (opt) => {
+		readLine.close();
+	});
+
+47. Repetir el menú de forma infinita
+48. Nota para la siguiente clase 
+	* https://www.npmjs.com/package/inquirer
