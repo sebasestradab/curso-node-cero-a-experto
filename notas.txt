@@ -188,3 +188,38 @@ Esta es una aplicación real que les puede servir mucho cuando tengan que crear 
 47. Repetir el menú de forma infinita
 48. Nota para la siguiente clase 
 	* https://www.npmjs.com/package/inquirer
+
+49. Construir el menú interactivo - Inquirer
+50. Opciones del menú interactivo
+51. Lógica para el manejo de las tareas por hacer
+	* https://www.npmjs.com/package/uuid
+
+52. Crear y listar tareas
+53. Transformar objeto a un arreglo - Detalles estéticos
+54. Guardar tareas en un archivo de texto
+55. Leer nuestra base de datos
+56. Tarea - Cargar tareas
+57. Listar tareas
+58. Tareas completadas y pendientes - opciones del menú
+59. Listado para borrar
+60. Confirmar y borrar tarea
+61. Múltiples selecciones
+62. Marcar como completadas o pendientes las tareas
+63. Código fuente de la sección
+	* https://github.com/Klerith/node-console-app-todo/releases/tag/v0.5.0
+
+
+Sección 6: Aplicación de Clima - GeoLocation + OpenWeatherMaps
+64. Inicio de sección
+65. Temas puntuales de la sección
+
+	La sección se enfoca en los siguientes temas:
+
+		1. Consumo de APIs
+		2. Llamadas HTTP hacia servidores externos
+		3. Paquete request - superficialmente
+		4. Paquete Axios
+		5. Mapbox places para obtener lugares por nombre
+		6. Uso de OpenWeather para obtener el clima
+		7. Aplicación de consola con historial
+		8. Variables de entorno
