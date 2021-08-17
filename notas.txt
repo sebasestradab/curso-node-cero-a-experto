@@ -223,3 +223,41 @@ Sección 6: Aplicación de Clima - GeoLocation + OpenWeatherMaps
 		6. Uso de OpenWeather para obtener el clima
 		7. Aplicación de consola con historial
 		8. Variables de entorno
+	
+66. Demostración del objetivo final de la sección
+67. Inicio de proyecto - ClimaApp
+	* Con la siguiente linea en el archivo package.json se puede ejecutar la aplicacion no solo con el "node index" en la consola
+	sino tambien "npm start"
+
+		"scripts": {
+			"start": "node index.js"
+		}
+	
+	* Se puden instalar varias dependencias en un misma linea, en el ejemplo se instala color e inquirer
+		npm i color inquirer
+
+68. Menu de la aplicación
+69. Modelo para controlar la aplicación
+70. Enlaces para la siguiente clase
+	Librerias para consumir APIs
+	* https://www.npmjs.com/package/request (deprecated)
+	* https://www.npmjs.com/package/fetch
+	* https://www.npmjs.com/package/axios (el mas recomendado)
+
+	Para pruebas rápidas del endpoint
+	https://reqres.in/
+
+71. Realizar peticiones HTTP desde Node
+
+72. Enlaces para la próxima clase
+	* https://www.mapbox.com/
+	* https://docs.mapbox.com/api/search/geocoding/
+
+73. Mapbox Search API y Token de acceso
+74. Crear instancias de Axios
+75. Variables de entorno
+	* https://www.npmjs.com/package/dotenv --> Para leer las vble de entorno de un archivo que debe ser nombrado .env.
+
+76. Listar los países de forma interactiva
+77. OpenWeather - Información del clima
+	* https://openweathermap.org/ --> Presenta api para obtener el clima de un lugar.
