@@ -261,3 +261,24 @@ Sección 6: Aplicación de Clima - GeoLocation + OpenWeatherMaps
 76. Listar los países de forma interactiva
 77. OpenWeather - Información del clima
 	* https://openweathermap.org/ --> Presenta api para obtener el clima de un lugar.
+
+78. Obtener información del clima del lugar seleccionado
+79. Resolución de la tarea del clima
+80. Persistencia en las búsquedas
+81. Leer del archivo JSON
+82. Resolución de la tarea - Leer archivo y capitalizar
+83. Código fuente de la sección
+
+Sección 7: Webserver - HTTP - EXPRESS - HBS
+84. Introducción a la sección
+85. Temas puntuales de la sección
+	1. Uso y configuración de Express
+    2. Servir contenido estático
+    3. Servir contenido dinámico
+    4. Template engines
+    5. Handebars
+        Parciales
+        Variables
+    6. Despliegues en Heroku
+    7. Hacer carpetas públicas en la web
+    8. Desplegar aplicaciones de Angular y React

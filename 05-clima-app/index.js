@@ -4,7 +4,7 @@ const { leerInput, inquirerMenu, pausa, listarLugares } = require("./helpers/inq
 const Busquedas = require("./models/busquedas");
 
 const main = async () => {
-
+	
 	const busquedas = new Busquedas();
 	let opt;
 	
@@ -21,22 +21,35 @@ const main = async () => {
 				
 				// Seleccionar le lugar
 				const id = await listarLugares(lugares);
-				const lugarSel = lugares.find(l => l.id  === id)
+				if (id === '0') continue;
+				
+				const lugarSel = lugares.find(l => l.id  === id);
+
+				// Guardar en DB
+				busquedas.agregarHistorial(lugarSel.nombre);
 
 				// Datos del Clima
+				const clima = await busquedas.climaLugar(lugarSel.lat, lugarSel.lng);
 
 				// Moistra resultados
+				console.clear();
 				console.log('\nInformación de la ciudad\n'.green);
-				console.log('Ciudad: ', lugarSel.nombre);
+				console.log('Ciudad: ', lugarSel.nombre.green);
 				console.log('Lat: ', lugarSel.lat);
 				console.log('Lng: ', lugarSel.lng);
-				console.log('Temperatura: ',);
-				console.log('Minima: ',);
-				console.log('Maxima: ',);
+				console.log('Temperatura: ',clima.temp);
+				console.log('Minima: ', clima.min);
+				console.log('Maxima: ', clima.max);
+				console.log('Como está el clima: ', clima.desc.green);
 
 				break;
 		
-			default:
+			case 2:
+				busquedas.historialCapitalizado.forEach((lugar, i) => { 
+					const idx = `${i + 1}.`.green;
+					console.log(`${idx} ${lugar}`);
+				});
+
 				break;
 		}
 
