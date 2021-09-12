@@ -282,3 +282,66 @@ Sección 7: Webserver - HTTP - EXPRESS - HBS
     6. Despliegues en Heroku
     7. Hacer carpetas públicas en la web
     8. Desplegar aplicaciones de Angular y React
+
+86. Inicio de proyecto - WebServer
+	* Asi se crea el servidor
+		const http = require('http');
+		
+		http.createServer((request, response) => {
+			response.write('Hola mundo');
+			response.end();
+		}).listen(8085);
+
+87. Request y Response
+88. Introducción a EXPRESS
+	* https://www.npmjs.com/package/express
+
+89. Servir contenido estático
+	* El archivo dentro del directorio public debe llamarse index.html para que se abra desde localhost:8085
+
+90. Servir un sitio web completo
+91. Handlebars
+	* https://www.npmjs.com/package/handlebars
+	* https://github.com/pillarjs/hbs
+
+92. Argumentos desde el controlador
+	* Se crean los archivos html pero con extension .hbs en donde se pueden manipular los valores que se le envian desde el js.
+	* Para utilizar los argumentos que se envian desde el .js en el .hbs se debe utilizar {{}}
+		.js
+			app.get('/', (req, res) => {
+				res.render('home', {
+					nombre: 'Sebas Estrada',
+					titulo: 'Curso Node'
+				});
+			});
+
+		.hbs
+			<title>{{ titulo }}</title>
+
+93. Usando parciales con HBS
+	* Son fragmentos de codigo html que se crean para despuyes ser enviados y asi poder reutilizar, cosas como el menu, footer, etc.
+	* Para utilizar en un .hbs la porcion de codigo HTML dentro de otro .hbs se debe utilizar {{>nombre_de_hbs}}
+		{{> header}}
+
+94. Preparar Webserver para subirlo a un hosting
+	* El puerto se debe configurar como variable de entorno, se puede utilizar el paquete dotenv
+		en archivo .env
+			PORT=8085
+
+		en codigo se lee asi
+			process.env.PORT;
+
+	* Crear el script de start para ejecutar la aplicacion desde el servidor donde se despliegue
+		"scripts": {
+			"start": "node app.js"
+		},
+
+95. Heroku - Subiendo nuestra aplicación a producción
+	* https://firebase.google.com/docs/hosting?hl=es
+	* https://azure.microsoft.com/en-ca/free/search/
+	* https://aws.amazon.com/es/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all
+	* https://cloud.google.com/
+	* https://try.digitalocean.com/developerbrand/
+	* https://www.heroku.com/
+	
+	heroku login
