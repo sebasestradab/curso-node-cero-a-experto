@@ -1,3 +1,6 @@
 [submodule "03-bases-node"]
 	path = 03-bases-node
 	url = https://github.com/sebasestradab/curso-node-tabla
+[submodule "06-webserver"]
+	path = 06-webserver
+	url = https://github.com/sebasestradab/webserver-node-experto.git
