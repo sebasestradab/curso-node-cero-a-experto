@@ -344,4 +344,35 @@ Sección 7: Webserver - HTTP - EXPRESS - HBS
 	* https://try.digitalocean.com/developerbrand/
 	* https://www.heroku.com/
 	
+	Comandos para realizar el despliegue
 	heroku login
+	heroku git:remote -a curso-node-sebasestradab
+	git push heroku main
+	
+
+96. Desplegando aplicaciones de Angular y React
+	* https://www.npmjs.com/package/http-server ---> Servidor para desplegar aplicaciones, se instala de modo global
+		npm install --global http-server
+
+	* Parado en el cmd en la carpeta donde esta la aplicacion a desplegar en el servidor, ejecutamos la siguiente linea
+		http-server -o
+
+97. Subir los cambios a Heroku
+	* Es hacer un push al remote heroku de los cambios despues de hacerles el add y el commit
+		git push heroku main
+
+98. Código fuente de la sección
+
+Sección 8: REST Server - Configuraciones iniciales
+99. Introducción a la sección
+100. Iniciando el proyecto - RESTServer
+101. Express basado en clases
+	Middlewares --> Funciones que añaden funcionalidad.
+
+102. Peticiones HTTP - GET - PUT - POST - DELETE
+103. Códigos de respuestas HTTP
+104. Usando códigos de respuesta HTTP en Express
+105. CORS - Middleware
+	* Permite proteger el servidor
+
+106. Separar las rutas y el controlador de la clase
