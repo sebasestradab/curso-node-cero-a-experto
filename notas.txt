@@ -376,3 +376,6 @@ Sección 8: REST Server - Configuraciones iniciales
 	* Permite proteger el servidor
 
 106. Separar las rutas y el controlador de la clase
+107. Obtener datos de un POST
+108. Parámetros de segmento y query
+109. Respaldo del RESTServer a GitHub
