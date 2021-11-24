@@ -4,3 +4,6 @@
 [submodule "06-webserver"]
 	path = 06-webserver
 	url = https://github.com/sebasestradab/webserver-node-experto.git
+[submodule "07-restserver"]
+	path = 07-restserver
+	url = https://github.com/sebasestradab/curso-node-restserver.git
