@@ -379,3 +379,47 @@ Sección 8: REST Server - Configuraciones iniciales
 107. Obtener datos de un POST
 108. Parámetros de segmento y query
 109. Respaldo del RESTServer a GitHub
+110. Subir el RESTServer a Heroku
+111. Pro Tip: Ambiente de producción y desarrollo en Postman
+112. Código fuente de la sección
+
+Sección 9: Alcances del RESTServer y mantenimiento de la colección de usuarios
+113. Introducción a la sección
+114. Temas puntuales de la sección
+    * Definir los alcances de nuestro RESTServer
+    * CRUD
+    * Encriptación de contraseñas
+    * Validaciones personalizadas
+    * Creación de roles
+    * Conexiones con MLAB
+    * Despliegue de base de datos en la nube
+
+115. Alcances del proyecto - RESTServer
+116. Configuración de MongoDB - MongoAtlas
+	* https://www.mongodb.com/atlas/database
+
+117. MongoDB Compass - Prueba de conexión
+118. Mongoose - Conectarnos a la base de datos
+	* https://mongoosejs.com/
+	* Ya no se usan
+			useCreateIndex: true,
+			useFindAndModify: false
+
+119. Modelo de Usuario
+	* En Mongo coleccion = Tabla
+	* module.exports = model('Usuario', UsuarioSchema); --> El primer argumento es el nombre que se le pone a la 
+		coleccion, mongoose le agrega una S al final, osea que la coleccion se llamara Usuarios, el segundo argumento
+		es el esquema creado. 
+
+120. POST: Creando un usuario en la colección
+121. BcryptJS - Encriptando la contraseña
+	* npm i bcryptjs --> Para encriptar contraseña
+	* const salt = bcryptjs.genSaltSync(un numero, entre mas alto mas confiuable pero mas demorado en responder, por defeco es el 10); --> Para encriptar la contraseña mas segura
+
+122. Validar campos obligatorios - Email
+	* npm i express-validator --> Sirve para realizar validaciones, se instalo para validar que el correo sea valido y unico
+
+123. Validar todos los campos necesarios
+124. Validar rol contra base de datos
+125. Centralizar la validación del rol
+126. Tarea - Custom validation - EmailExiste
